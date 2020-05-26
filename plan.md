@@ -2,21 +2,33 @@
 
 ## Content
 
+- Housekeeping
 - Intro
 - Curriculum Overview
 - Approach to lectures
 - Incremental development
 - Git
 
+## Housekeeping
+
+- Who's here?
+- Live Share Setup
+
 ## Intro
 
 Hey, I'm DOM
 
-## Michael Jordan's Quote
+## Confidence Level of a Programmer (Joke)
 
-> “I've missed more than 9000 shots in my career. I've lost almost 300 games. 26 times, I've been trusted to take the game winning shot and missed. I've failed over and over and over again in my life. And that is why I succeed.”
-> ― Michael jordan
+Level 1- I can’t fix this
 
+Level 2- Crisis of confidence
+
+Level 3- Questions career
+
+Level 4- Questions life
+
+[Michael Jordan's Quote](./quote.md)
 
 ## Curriculum Overview
 
