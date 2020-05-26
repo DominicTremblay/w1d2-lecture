@@ -2,38 +2,25 @@
 
 ## Content
 
-- Housekeeping
 - Intro
 - Curriculum Overview
 - Approach to lectures
 - Incremental development
 - Git
 
-## Housekeeping
-
-- Who's here?
-- Live Share Setup
-
 ## Intro
 
 Hey, I'm DOM
 
-## Confidence Level of a Programmer (Joke)
+## Michael Jordan's Quote
 
-Level 1- I can’t fix this
+> “I've missed more than 9000 shots in my career. I've lost almost 300 games. 26 times, I've been trusted to take the game winning shot and missed. I've failed over and over and over again in my life. And that is why I succeed.”
+> ― Michael jordan
 
-Level 2- Crisis of confidence
-
-Level 3- Questions career
-
-Level 4- Questions life
-
-[Michael Jordan's Quote](./quote.md)
 
 ## Curriculum Overview
 
 [slides](https://docs.google.com/presentation/d/1m3R_aN4S5YoCBmXRbjaZQGatygWyZXYLcN-fkcP_HWA)
-
 
 ## Remote Lecture
 
@@ -115,9 +102,9 @@ Level 4- Questions life
 
 - Help one another
 
-* Critical factor for sucess: ask questions!
+* Critical factor for success: ask questions!
 
-  - Mentors are bored. You can harass them!
+  - Mentors are bored. Do reach out to them!
 
     - 15 minutes rule
     - Code review
@@ -211,36 +198,6 @@ Level 4- Questions life
   - Getting errors is part of the process -> Debugging
   - Incremental development is triggered by raising errors that will guide us in order to do the next steps
 
-## What is an Algorithm
-
-- Put simply an algorithm is a **series of steps to solve a problem**
-
-- A more formal definition:
-
-> "An algorithm is a _sequence of unambiguous instructions_ for _solving a problem_, i.e., for obtaining a required _output_ for any _legitimate input_ in a _finite amount of time._" -- _Anany Levitin_
-
-- Sequence of unambiguous instructions
-
-  - Humans use abstractions for almost everything (Grabing a coffee, go to work, etc)
-  - Computers needs to be told every detailed steps in order to do something. These steps need to be precise.
-
-- Solving a Problem
-
-  - Am I solving the right problem?
-  - Do I truly understand the problem
-
-- Obtaining the required output
-
-  - Am I getting the right solution? Does it solved the problem?
-
-- Any legitimate input
-
-  - Am I dealing with the right input?
-  - Does it work with a different set of data?
-
-- A finite amount of time
-
-  - Can the solution be found in a reasonable amount of time
 
 ## Creating the app
 
