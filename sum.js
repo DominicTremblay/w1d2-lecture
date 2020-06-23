@@ -5,37 +5,44 @@
 // Extract the command line arguments
 // splice or slice
 const args = process.argv.slice(2);
-console.log(args);
-
-// We need at least 2 arguments.
-
-// we need an accumulator
-let total = 0;
-
-// goes through each
-
-
-//  if you're confortable with the for of
-// for (let arg of args) {
-
-// }
-
-for (let i = 0; i < args.length; i++) {
-
-  // console.log("index:",i, "number:", args[i], "type:", typeof args[i]);
-  // add each number
-  // convert the arguments to number
-  total += Number(args[i]);
-  // total = total + args[i]
-
-  console.log("total:", total);
-
+// console.log(args);
+// We need at least 2 arguments. ouput an error msg
+if (args.length < 2) {
+  console.log('Please provide at least 2 arguments!');
+  process.exit(1);
 }
 
-// If any argument is not a whole number, skip it
-// Do support negative numbers though.
-// If any argument is not a number, output an error message.
+const sum = function (numbers) {
+  // we need an accumulator
+  let total = 0;
 
+  // goes through each
 
-// print the sum
+  //  if you're confortable with the for of
+  // for (let arg of args) {
 
+  // }
+
+  for (let i = 0; i < args.length; i++) {
+    // add each number
+    const number = Number(args[i]);
+    // console.log("index:",i, "number:", number, "type:", typeof number);
+    // convert the arguments to number
+    // If any argument is not a number, output an error message.
+    if (isNaN(number)) {
+      console.log('please provide all numbers');
+      process.exit(1);
+    }
+
+    // If any argument is not a whole number, skip it
+    if (number % 1 === 0) {
+      total += number;
+      // total = total + args[i]
+    }
+  }
+  // print the sum
+
+  console.log('total:', total);
+};
+
+sum(args);
