@@ -4,45 +4,70 @@
 
 // Extract the command line arguments
 // splice or slice
-const args = process.argv.slice(2);
-// console.log(args);
-// We need at least 2 arguments. ouput an error msg
-if (args.length < 2) {
-  console.log('Please provide at least 2 arguments!');
-  process.exit(1);
-}
+const getArguments = function () {
+  const args = process.argv.slice(2);
+  // console.log(args);
+  // We need at least 2 arguments. ouput an error msg
+  if (args.length < 2) {
+    console.log('Please provide at least 2 arguments!');
+    process.exit(1);
+  }
+  return args;
+};
+
+// convert each argument into a number
+const convertToNum = function (list) {
+  const numbers = [];
+  for (let i = 0; i < list.length; i++) {
+    numbers.push(Number(list[i]));
+  }
+  return numbers;
+};
+
+// filter out any argument that is not a number
+const filterAllInt = function (numbers) {
+  for (let i = 0; i < numbers.length; i++) {
+    // If any argument is not a number, output an error message.
+    if (isNaN(numbers[i])) {
+      console.log('please provide all numbers');
+      process.exit(1);
+    }
+  }
+  return numbers;
+};
+
+const getWholeNumbers = function (numbers) {
+  const numOutput = [];
+  for (let i = 0; i < numbers.length; i++) {
+    // If any argument is not a whole number, skip it
+    if (numbers[i] % 1 === 0) {
+      numOutput.push(numbers[i]);
+    }
+  }
+  return numOutput;
+};
 
 const sum = function (numbers) {
   // we need an accumulator
   let total = 0;
 
-  // goes through each
-
-  //  if you're confortable with the for of
-  // for (let arg of args) {
-
-  // }
-
-  for (let i = 0; i < args.length; i++) {
+  for (let i = 0; i < numbers.length; i++) {
     // add each number
-    const number = Number(args[i]);
-    // console.log("index:",i, "number:", number, "type:", typeof number);
-    // convert the arguments to number
-    // If any argument is not a number, output an error message.
-    if (isNaN(number)) {
-      console.log('please provide all numbers');
-      process.exit(1);
-    }
-
-    // If any argument is not a whole number, skip it
-    if (number % 1 === 0) {
-      total += number;
-      // total = total + args[i]
-    }
+    const number = numbers[i];
+    console.log('index:', i, 'number:', number, 'type:', typeof number);
+    total += number;
   }
   // print the sum
-
-  console.log('total:', total);
+  return total;
 };
 
-sum(args);
+// const convertedNb = convertToNum(args);
+// console.log("convertedNb", convertedNb);
+// const filteredNb = filterAllInt(convertedNb);
+// console.log("filterd nb", filteredNb);
+// const wholeNb = getWholeNumbers(filteredNb);
+// console.log("Whole Nb:", wholeNb);
+
+
+const result = sum(getWholeNumbers(filterAllInt(convertToNum(getArguments()))));
+console.log('Total:', result);
