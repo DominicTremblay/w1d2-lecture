@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/sum.js",
+      "program": "${workspaceFolder}/demo/sum.js",
       "args": [
         "1",
         "2",
