@@ -1,14 +1,18 @@
 // - Write a node program that takes in an unlimited number of command line arguments, goes through each and prints out the sum of them. If any argument is not a whole number, skip it. Do support negative numbers though. If any argument is not a number, output an error message. We need at least 2 arguments.
 
-// Extract an unlimited number of command line arguments
-const args = process.argv.slice(2);
-// console.log("args:", args);
-// Edge case:  We need at least 2 arguments. => if statement
-if (args.length < 2) {
-  console.log('Please provide at least 2 arguments');
-  return;
-}
+const getArguments = function() {
 
+  // Extract an unlimited number of command line arguments
+  const args = process.argv.slice(2);
+  // console.log("args:", args);
+  // Edge case:  We need at least 2 arguments. => if statement
+  if (args.length < 2) {
+    console.log('Please provide at least 2 arguments');
+    process.exit();
+  }
+  return args;
+}
+  
 const convertToNums = function (numbers) {
   const outputNums = [];
   for (let num of numbers) {
@@ -56,4 +60,4 @@ const sum = function (numbers) {
   return total;
 };
 
-console.log('Total:', sum(allInt(allNums(convertToNums(args)))));
+console.log('Total:', sum(allInt(allNums(convertToNums(getArguments())))));
