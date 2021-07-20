@@ -21,7 +21,6 @@ Hey, I'm DOM
 ## Curriculum Overview
 
 [slides](https://docs.google.com/presentation/d/1m3R_aN4S5YoCBmXRbjaZQGatygWyZXYLcN-fkcP_HWA)
-
 ## Remote Lecture
 
 - It's recorded with Zoom
